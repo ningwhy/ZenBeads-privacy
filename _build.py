@@ -13,7 +13,7 @@ import re
 SITE = os.path.dirname(os.path.abspath(__file__))
 
 # Canonical URLs — final deployment target; adjust here if the host changes.
-CANON_BASE = "https://zenbeads-site.pages.dev"
+CANON_BASE = "https://zenbeads-privacy.pages.dev"
 PRIVACY_BASE = "/privacy"
 APP_STORE = "https://apps.apple.com/app/id6821324992"
 CONTACT = "yanoutech@163.com"
