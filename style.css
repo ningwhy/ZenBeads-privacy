@@ -1,0 +1,401 @@
+/* ==========================================================================
+   ZenBeads 官网样式 · Design tokens 与隐私页(zenbeads-privacy)保持一致
+   暖棕 #6b4f2e / 米色 #faf9f7 / 卡片白 / 圆角 14px
+   字体策略：标题/品牌名用霞鹜文楷子集(woff2, 仅中文页有实际字形，
+   其他语种自动回退系统字体)；正文全部使用系统字体栈，保证性能。
+   ========================================================================== */
+
+/* 霞鹜文楷子集：仅包含本站用到的字形，体积 ~几十 KB；
+   原始 TTF 24MB，完整字体不适合 Web 分发。 */
+@font-face {
+  font-family: "LXGW WenKai";
+  src: url("fonts/lxgw-wenkai-subset.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+4E00-9FFF, U+3000-303F, U+FF00-FFEF, U+00B7, U+2014, U+2018-201F, U+2026, U+00A9;
+}
+
+:root {
+  color-scheme: light;
+  --bg: #faf9f7;
+  --ink: #2d2a26;
+  --ink-soft: #4a453e;
+  --muted: #8a8378;
+  --brown: #6b4f2e;
+  --brown-deep: #4a3620;
+  --line: #eee6da;
+  --card: #ffffff;
+  --wash: #f5efe4;
+  --radius: 14px;
+  --shadow: 0 1px 3px rgba(90, 70, 40, 0.05);
+  --shadow-lift: 0 10px 30px rgba(90, 70, 40, 0.10);
+  --font-hand: "LXGW WenKai", "Songti SC", "Noto Serif SC", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Noto Sans KR", "Noto Sans Thai", sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: var(--brown); }
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- a11y skip link ---------- */
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--brown);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 0 0 10px 0;
+  z-index: 100;
+}
+.skip:focus { left: 0; }
+
+/* ---------- header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 249, 247, 0.92);
+  backdrop-filter: saturate(1.2) blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.brand {
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  color: var(--brown-deep);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.brand-latin {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 500;
+  margin-left: 2px;
+}
+.lang-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 0.82rem;
+}
+.lang-switch a {
+  text-decoration: none;
+  color: var(--muted);
+  border-bottom: 1px dashed transparent;
+  padding-bottom: 1px;
+}
+.lang-switch a:hover { color: var(--brown); }
+.lang-switch a.cur {
+  color: var(--brown);
+  font-weight: 700;
+  border-bottom: 2px solid var(--brown);
+}
+
+/* ---------- hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 64px;
+  background:
+    radial-gradient(1200px 500px at 85% -10%, rgba(245, 239, 228, 0.9), transparent 60%),
+    radial-gradient(900px 420px at -10% 110%, rgba(238, 230, 218, 0.55), transparent 55%);
+}
+.hero-inner { position: relative; text-align: center; }
+.hero-beads {
+  margin: 0 auto 28px;
+  width: 132px;
+  height: 132px;
+  opacity: 0.9;
+}
+.hero-title {
+  font-family: var(--font-hand);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 8vw, 4.2rem);
+  color: var(--brown-deep);
+  letter-spacing: 0.12em;
+  line-height: 1.15;
+}
+.hero-tagline {
+  margin-top: 18px;
+  font-size: clamp(1rem, 3.2vw, 1.25rem);
+  color: var(--brown);
+  letter-spacing: 0.08em;
+}
+.hero-sub {
+  margin: 18px auto 0;
+  max-width: 34em;
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+}
+.hero-cta { margin-top: 40px; }
+
+/* App Store badge（自绘，官方黑底样式） */
+.appstore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 10px 22px 10px 16px;
+  min-height: 56px;
+  box-shadow: 0 6px 18px rgba(45, 42, 38, 0.22);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.appstore-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(45, 42, 38, 0.28); }
+.appstore-btn:active { transform: translateY(0); }
+.appstore-btn .btn-apple { flex: 0 0 auto; }
+.appstore-btn .btn-text { display: flex; flex-direction: column; line-height: 1.2; text-align: left; }
+.appstore-btn .btn-text small { font-size: 0.68rem; opacity: 0.82; letter-spacing: 0.02em; }
+.appstore-btn .btn-text b { font-size: 1.28rem; font-weight: 600; letter-spacing: -0.01em; }
+
+/* ---------- section headings ---------- */
+.section-title {
+  font-family: var(--font-hand);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 5vw, 2.1rem);
+  color: var(--brown-deep);
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+.section-sub {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 10px auto 0;
+  max-width: 36em;
+}
+
+/* ---------- features ---------- */
+.features { padding: 72px 0 24px; }
+.feature-grid {
+  margin-top: 48px;
+  display: grid;
+  gap: 56px;
+}
+.feature {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+}
+/* first card shown as normal flow; screenshot always on the right column */
+.feature-media {
+  background: linear-gradient(180deg, #fff, #fdfbf7);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 10px;
+  width: min(78vw, 320px);
+  justify-self: center;
+}
+.feature-media img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+.feature-kicker {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  color: var(--brown);
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+}
+.kicker-verb { font-weight: 700; }
+.kicker-dot { color: var(--line); }
+.feature-name {
+  font-family: var(--font-hand);
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--ink);
+  margin-top: 6px;
+  letter-spacing: 0.04em;
+}
+.feature-desc {
+  margin-top: 10px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  max-width: 34em;
+}
+
+/* ---------- privacy band ---------- */
+.privacy-band {
+  margin-top: 64px;
+  background: var(--wash);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 64px 0;
+}
+.privacy-title {
+  font-family: var(--font-hand);
+  font-weight: 400;
+  font-size: clamp(1.3rem, 4.5vw, 1.8rem);
+  color: var(--brown-deep);
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.privacy-lead {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+.privacy-points {
+  list-style: none;
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 26px 22px;
+}
+.privacy-points li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.privacy-points strong {
+  color: var(--brown);
+  font-size: 1.02rem;
+  letter-spacing: 0.03em;
+}
+.privacy-points span { color: var(--muted); font-size: 0.85rem; line-height: 1.6; }
+.privacy-health {
+  margin: 30px auto 0;
+  max-width: 46em;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+/* ---------- gallery ---------- */
+.gallery { padding: 72px 0 8px; overflow: hidden; }
+.gal-strip {
+  margin-top: 40px;
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 24px 22px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+.gal-item {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+  background: var(--card);
+  padding: 8px;
+}
+.gal-item img {
+  border-radius: 8px;
+  height: 300px;
+  width: auto;
+}
+.gal-hint {
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+/* ---------- closing ---------- */
+.closing {
+  padding: 88px 0 72px;
+  text-align: center;
+  background: linear-gradient(180deg, transparent, rgba(245, 239, 228, 0.55));
+}
+.closing-title {
+  font-family: var(--font-hand);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 4.5vw, 1.9rem);
+  color: var(--brown-deep);
+  letter-spacing: 0.05em;
+}
+.closing-text {
+  margin: 14px auto 36px;
+  max-width: 30em;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
+/* ---------- footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 36px 0 44px;
+  background: var(--bg);
+}
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+.footer-brand { color: var(--muted); font-size: 0.85rem; }
+.footer-links { display: flex; gap: 22px; font-size: 0.85rem; }
+.footer-links a { color: var(--brown); text-decoration: none; border-bottom: 1px dashed var(--line); padding-bottom: 1px; }
+.footer-links a:hover { border-bottom-color: var(--brown); }
+.footer-font { color: var(--muted); font-size: 0.78rem; max-width: 46em; }
+.footer-font a { color: inherit; }
+
+/* ---------- desktop ---------- */
+@media (min-width: 900px) {
+  .hero { padding: 96px 0 88px; }
+  .feature-grid { gap: 72px; }
+  .feature {
+    grid-template-columns: minmax(0, 1fr) 400px;
+    gap: 56px;
+  }
+  .feature-media { order: 2; width: 100%; max-width: 400px; }
+  .feature-body { padding-right: 8px; }
+  .gal-item img { height: 360px; }
+}
+
+/* ---------- motion preferences ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .appstore-btn { transition: none; }
+  .appstore-btn:hover { transform: none; }
+}
