@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""ZenBeads official site generator.
+"""ZenAura official site generator.
 
 Generates index.html (zh-Hans), en.html, ko.html, th.html from a single
 source of copy truth. Copy deck is aligned with ASC metadata v2.1
@@ -33,8 +33,8 @@ OG_LOCALE = {"zh-Hans": "zh_CN", "en": "en_US", "ko": "ko_KR", "th": "th_TH"}
 # ----------------------------------------------------------------------------
 COPY = {
     "zh-Hans": {
-        "brand": "禅珠",
-        "brand_latin": "ZenBeads",
+        "brand": "禅意",
+        "brand_latin": "ZenAura",
         "tagline": "攒功德 · 步数换福袋 · 静心解压 · 许愿题壁",
         "hero_sub": "烦恼来的时候，敲一下就好。离线、私密、极简的电子佛珠与木鱼计数器。",
         "cta_small": "在 App Store 下载",
@@ -42,9 +42,9 @@ COPY = {
         "lang_name": "简体中文",
         "skip": "跳到主要内容",
         "lang_label": "语言",
-        "title": "禅珠 ZenBeads — 敲木鱼 · 108 念珠 · 今日功课 · 许愿壁纸",
-        "meta_desc": "禅珠（ZenBeads）——离线、私密、极简的电子佛珠与木鱼计数器。敲木鱼攒功德，步数换算今日功课，许愿做成竖排题壁壁纸。无账号、无广告、无追踪、完全离线。",
-        "og_title": "禅珠 ZenBeads · 敲一下，静一会儿",
+        "title": "禅意 ZenAura — 敲木鱼 · 108 念珠 · 今日功课 · 许愿壁纸",
+        "meta_desc": "禅意（ZenAura）——离线、私密、极简的电子佛珠与木鱼计数器。敲木鱼攒功德，步数换算今日功课，许愿做成竖排题壁壁纸。无账号、无广告、无追踪、完全离线。",
+        "og_title": "禅意 ZenAura · 敲一下，静一会儿",
         "og_desc": "电子木鱼 · 108 念珠 · 今日功课 · 许愿题壁。无账号、无广告、完全离线。",
         "features_title": "一珠一念，皆是功课",
         "features_sub": "五个安放注意力的地方",
@@ -69,14 +69,14 @@ COPY = {
         "gallery_alt": "佛像装扮组合",
         "gallery_hint": "横向滑动查看更多 →",
         "closing_title": "没有推送催促，没有排行榜。",
-        "closing_text": "禅珠不会让你变得更好——它只是提醒你，你已经很好了。",
+        "closing_text": "禅意不会让你变得更好——它只是提醒你，你已经很好了。",
         "footer_privacy": "隐私政策",
         "footer_contact": "联系我们",
         "footer_font": "开源字体致谢：霞鹜文楷（LXGW WenKai），SIL Open Font License 1.1",
         "footer_rights": "保留所有权利。",
     },
     "en": {
-        "brand": "ZenBeads",
+        "brand": "ZenAura",
         "brand_latin": "",
         "tagline": "Wooden Fish & Buddhist Chant",
         "hero_sub": "When a thought arises, tap it away. An offline, private, minimal set of prayer beads and a wooden-fish counter.",
@@ -85,9 +85,9 @@ COPY = {
         "lang_name": "English",
         "skip": "Skip to content",
         "lang_label": "Language",
-        "title": "ZenBeads — Prayer Beads & Wooden Fish, Fully Offline",
-        "meta_desc": "ZenBeads — an offline, private, minimal set of Buddhist prayer beads and a wooden fish counter. One tap, one merit; today's steps become today's practice; turn a wish into a vertical wallpaper. No account, no ads, no tracking, fully offline.",
-        "og_title": "ZenBeads · Tap. Breathe. Repeat.",
+        "title": "ZenAura — Prayer Beads & Wooden Fish, Fully Offline",
+        "meta_desc": "ZenAura — an offline, private, minimal set of Buddhist prayer beads and a wooden fish counter. One tap, one merit; today's steps become today's practice; turn a wish into a vertical wallpaper. No account, no ads, no tracking, fully offline.",
+        "og_title": "ZenAura · Tap. Breathe. Repeat.",
         "og_desc": "Buddhist prayer beads & wooden fish. No account, no ads, fully offline.",
         "features_title": "One bead, one breath",
         "features_sub": "Five places to rest your attention",
@@ -112,7 +112,7 @@ COPY = {
         "gallery_alt": "Buddha outfit combination",
         "gallery_hint": "Scroll sideways for more →",
         "closing_title": "No notifications nagging you. No leaderboards.",
-        "closing_text": "ZenBeads won't make you better. It just reminds you: you are already enough.",
+        "closing_text": "ZenAura won't make you better. It just reminds you: you are already enough.",
         "footer_privacy": "Privacy Policy",
         "footer_contact": "Contact",
         "footer_font": "Font credit: LXGW WenKai, licensed under the SIL Open Font License 1.1",
@@ -120,7 +120,7 @@ COPY = {
     },
     "ko": {
         "brand": "젠비즈",
-        "brand_latin": "ZenBeads",
+        "brand_latin": "ZenAura",
         "tagline": "108알 공덕 · 걷기 수행 · 마음챙김",
         "hero_sub": "마음이 복잡할 땐, 한 번 두드려 보세요. 오프라인으로 쓰는 나만의 염주와 목탁이에요.",
         "cta_small": "다운로드",
@@ -128,9 +128,9 @@ COPY = {
         "lang_name": "한국어",
         "skip": "본문으로 건너뛰기",
         "lang_label": "언어",
-        "title": "ZenBeads 젠비즈 — 염주 · 목탁 · 오늘의 수행",
-        "meta_desc": "ZenBeads — 오프라인으로 쓰는 나만의 염주와 목탁. 한 번 두드리면 공덕 하나, 오늘 걸은 걸음이 오늘의 수행이 돼요. 소원으로 세로 배경화면을 만들어요. 계정도 광고도 없고 완전 오프라인이에요.",
-        "og_title": "ZenBeads · 두드리면 마음이 조용해져요",
+        "title": "ZenAura 젠비즈 — 염주 · 목탁 · 오늘의 수행",
+        "meta_desc": "ZenAura — 오프라인으로 쓰는 나만의 염주와 목탁. 한 번 두드리면 공덕 하나, 오늘 걸은 걸음이 오늘의 수행이 돼요. 소원으로 세로 배경화면을 만들어요. 계정도 광고도 없고 완전 오프라인이에요.",
+        "og_title": "ZenAura · 두드리면 마음이 조용해져요",
         "og_desc": "목탁 · 염주 108알 · 오늘의 수행. 계정도 광고도 없고 완전 오프라인이에요.",
         "features_title": "한 알에 한 호흡",
         "features_sub": "마음을 머무르게 하는 다섯 가지",
@@ -155,7 +155,7 @@ COPY = {
         "gallery_alt": "불상 꾸미기 조합",
         "gallery_hint": "옆으로 밀어 더 보기 →",
         "closing_title": "재촉하는 알림도, 순위표도 없어요.",
-        "closing_text": "ZenBeads는 당신을 더 좋은 사람으로 만들지 않아요. 이미 충분하다는 걸 알려 줄 뿐이에요.",
+        "closing_text": "ZenAura는 당신을 더 좋은 사람으로 만들지 않아요. 이미 충분하다는 걸 알려 줄 뿐이에요.",
         "footer_privacy": "개인정보 처리방침",
         "footer_contact": "연락처",
         "footer_font": "글꼴 안내: 샤뤼원카이(LXGW WenKai), SIL 오픈 폰트 라이선스 1.1",
@@ -163,7 +163,7 @@ COPY = {
     },
     "th": {
         "brand": "เซ็นบีดส์",
-        "brand_latin": "ZenBeads",
+        "brand_latin": "ZenAura",
         "tagline": "เคาะปลาไม้ สวดมนต์ ทำบุญ",
         "hero_sub": "เมื่อใจไม่สงบ ลองเคาะสักครั้งหนึ่ง ลูกประคำและไม้เคาะในมือถือที่ใช้งานได้แบบออฟไลน์และเป็นส่วนตัว",
         "cta_small": "ดาวน์โหลดบน",
@@ -171,9 +171,9 @@ COPY = {
         "lang_name": "ไทย",
         "skip": "ข้ามไปยังเนื้อหา",
         "lang_label": "ภาษา",
-        "title": "ZenBeads เซ็นบีดส์ — ลูกประคำ · ปลาไม้ · ภาวนา",
-        "meta_desc": "ZenBeads — ชุดลูกประคำและไม้เคาะในมือถือที่ใช้งานได้แบบออฟไลน์และเป็นส่วนตัว เคาะหนึ่งครั้งเป็นบุญหนึ่งครั้ง ก้าวเดินในแต่ละวันก็เป็นการภาวนาของวันนี้ได้ และทำคำอธิษฐานเป็นภาพพื้นหลังแนวตั้ง ไม่มีบัญชี ไม่มีโฆษณา ไม่มีการติดตาม",
-        "og_title": "ZenBeads · เคาะครั้งเดียว ใจก็สงบ",
+        "title": "ZenAura เซ็นบีดส์ — ลูกประคำ · ปลาไม้ · ภาวนา",
+        "meta_desc": "ZenAura — ชุดลูกประคำและไม้เคาะในมือถือที่ใช้งานได้แบบออฟไลน์และเป็นส่วนตัว เคาะหนึ่งครั้งเป็นบุญหนึ่งครั้ง ก้าวเดินในแต่ละวันก็เป็นการภาวนาของวันนี้ได้ และทำคำอธิษฐานเป็นภาพพื้นหลังแนวตั้ง ไม่มีบัญชี ไม่มีโฆษณา ไม่มีการติดตาม",
+        "og_title": "ZenAura · เคาะครั้งเดียว ใจก็สงบ",
         "og_desc": "ปลาไม้ · ลูกประคำ 108 เม็ด · การภาวนารายวัน ออฟไลน์เต็มรูปแบบ ไม่มีบัญชี ไม่มีโฆษณา",
         "features_title": "หนึ่งเม็ด หนึ่งลมหายใจ",
         "features_sub": "ที่ห้าแห่งสำหรับวางใจลง",
@@ -198,7 +198,7 @@ COPY = {
         "gallery_alt": "ชุดแต่งตัวองค์พระ",
         "gallery_hint": "ปัดไปด้านข้างเพื่อดูเพิ่ม →",
         "closing_title": "ไม่มีการแจ้งเตือนเร่งเร้า ไม่มีตารางอันดับ",
-        "closing_text": "ZenBeads ไม่ได้ทำให้คุณดีขึ้น เพียงแต่เตือนให้รู้ว่า คุณดีอยู่แล้ว",
+        "closing_text": "ZenAura ไม่ได้ทำให้คุณดีขึ้น เพียงแต่เตือนให้รู้ว่า คุณดีอยู่แล้ว",
         "footer_privacy": "นโยบายความเป็นส่วนตัว",
         "footer_contact": "ติดต่อเรา",
         "footer_font": "กิตติกรรมประกาศแบบอักษร: LXGW WenKai ภายใต้ SIL Open Font License 1.1",
@@ -313,7 +313,7 @@ def build_page(lang: str) -> str:
     {alts}
     {xdefault}
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="ZenBeads">
+  <meta property="og:site_name" content="ZenAura">
   <meta property="og:title" content="{esc(c["og_title"])}">
   <meta property="og:description" content="{esc(c["og_desc"])}">
   <meta property="og:image" content="{CANON_BASE}/{og_img}">
@@ -398,7 +398,7 @@ def build_page(lang: str) -> str:
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <p class="footer-brand">© 2026 ZenBeads（{c["brand"]}）. {c["footer_rights"]}</p>
+      <p class="footer-brand">© 2026 ZenAura（{c["brand"]}）. {c["footer_rights"]}</p>
       <nav class="footer-links">
         <a href="{privacy_url}" rel="noopener">{c["footer_privacy"]}</a>
         <a href="mailto:{CONTACT}">{c["footer_contact"]}</a>
